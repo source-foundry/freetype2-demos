@@ -1544,9 +1544,9 @@
            ( handle->autohint                            ||
              handle->lcd_mode == LCD_MODE_LIGHT          ||
              handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
-*/      {
-        status.header = "dumping glyph edges to stdout";
-        af_glyph_hints_dump_edges( _af_debug_hints, 1 );
+      {  */
+      status.header = "dumping glyph edges to stdout";
+      af_glyph_hints_dump_edges( _af_debug_hints, 1 );
 /*      } */
       break;
 
@@ -1555,9 +1555,9 @@
            ( handle->autohint                            ||
              handle->lcd_mode == LCD_MODE_LIGHT          ||
              handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
-*/      {
-        status.header = "dumping glyph segments to stdout";
-        af_glyph_hints_dump_segments( _af_debug_hints, 1 );
+      {  */
+      status.header = "dumping glyph segments to stdout";
+      af_glyph_hints_dump_segments( _af_debug_hints, 1 );
 /*      }  */
       break;
 
@@ -1566,9 +1566,9 @@
            ( handle->autohint                            ||
              handle->lcd_mode == LCD_MODE_LIGHT          ||
              handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
-*/      {
-        status.header = "dumping strong glyph points to stdout";
-        af_glyph_hints_dump_strong_points( _af_debug_hints, 1 );
+      {  */
+      status.header = "dumping strong glyph points to stdout";
+      af_glyph_hints_dump_strong_points( _af_debug_hints, 1 );
 /*      }   */
       break;
 #endif /* FT_DEBUG_AUTOFIT */
