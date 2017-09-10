@@ -178,7 +178,7 @@
     st->do_blue_hints = 1;
     st->do_segment    = 0;
     st->do_grid       = 1;
-    st->do_alt_colors = 1;  /* custom: default to alt colors */
+    st->do_alt_colors = 0;
 
     st->Num           = 0;
     st->lcd_filter    = FT_LCD_FILTER_DEFAULT;
@@ -203,13 +203,15 @@
   grid_status_colors( GridStatus       st,
                       FTDemo_Display*  display )
   {
-    st->axis_color    = grFindColor( display->bitmap,   0,   0,   0, 255 ); /* black       */
-    st->grid_color    = grFindColor( display->bitmap, 192, 192, 192, 255 ); /* gray        */
-    st->outline_color = grFindColor( display->bitmap, 255,   0,   0, 255 ); /* red         */
-    st->on_color      = grFindColor( display->bitmap, 255,   0,   0, 255 ); /* red         */
-    st->off_color     = grFindColor( display->bitmap,   0, 128,   0, 255 ); /* dark green  */
-    st->segment_color = grFindColor( display->bitmap,  64, 255, 128,  64 ); /* light green */
-    st->blue_color    = grFindColor( display->bitmap,  64,  64, 255,  64 ); /* light blue  */
+    /* colours are adjusted for color-blind people, */
+    /* cf. http://jfly.iam.u-tokyo.ac.jp/color      */
+    st->axis_color    = grFindColor( display->bitmap,   0,   0,   0, 255 ); /* black          */
+    st->grid_color    = grFindColor( display->bitmap, 192, 192, 192, 255 ); /* gray           */
+    st->outline_color = grFindColor( display->bitmap, 230, 159,   0, 255 ); /* orange         */
+    st->on_color      = grFindColor( display->bitmap, 230, 159,   0, 255 ); /* orange         */
+    st->off_color     = grFindColor( display->bitmap,  86, 180, 233, 255 ); /* sky blue       */
+    st->segment_color = grFindColor( display->bitmap, 204, 121, 167,  64 ); /* reddish purple */
+    st->blue_color    = grFindColor( display->bitmap,   0, 114, 178,  64 ); /* blue           */
   }
 
 
