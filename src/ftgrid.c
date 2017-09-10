@@ -172,13 +172,13 @@
     st->x_origin      = 0;
     st->y_origin      = 0;
 
-    st->work          = DO_OUTLINE | DO_DOTS | DO_DOTNUMBERS;  // custom: default to display of dot numbers, no bitmap
+    st->work          = DO_OUTLINE | DO_DOTS | DO_DOTNUMBERS;  /* custom: default to display of dot numbers, no bitmap */
     st->do_horz_hints = 1;
     st->do_vert_hints = 1;
     st->do_blue_hints = 1;
     st->do_segment    = 0;
     st->do_grid       = 1;
-    st->do_alt_colors = 1;  // custom: default to alt colors
+    st->do_alt_colors = 1;  /* custom: default to alt colors */
 
     st->Num           = 0;
     st->lcd_filter    = FT_LCD_FILTER_DEFAULT;
@@ -1540,36 +1540,36 @@
 
 #ifdef FT_DEBUG_AUTOFIT
     case grKEY( '1' ):
-//      if ( handle->hinted                                  &&
-//           ( handle->autohint                            ||
-//             handle->lcd_mode == LCD_MODE_LIGHT          ||
-//             handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
-//      {
+/*      if ( handle->hinted                                  &&
+           ( handle->autohint                            ||
+             handle->lcd_mode == LCD_MODE_LIGHT          ||
+             handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
+*/      {
         status.header = "dumping glyph edges to stdout";
         af_glyph_hints_dump_edges( _af_debug_hints, 1 );
-//      }
+/*      } */
       break;
 
     case grKEY( '2' ):
-//      if ( handle->hinted                                  &&
-//           ( handle->autohint                            ||
-//             handle->lcd_mode == LCD_MODE_LIGHT          ||
-//             handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
-//      {
+/*      if ( handle->hinted                                  &&
+           ( handle->autohint                            ||
+             handle->lcd_mode == LCD_MODE_LIGHT          ||
+             handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
+*/      {
         status.header = "dumping glyph segments to stdout";
         af_glyph_hints_dump_segments( _af_debug_hints, 1 );
-//      }
+/*      }  */
       break;
 
     case grKEY( '3' ):
-//      if ( handle->hinted                                  &&
-//           ( handle->autohint                            ||
-//             handle->lcd_mode == LCD_MODE_LIGHT          ||
-//             handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
-//      {
+/*      if ( handle->hinted                                  &&
+           ( handle->autohint                            ||
+             handle->lcd_mode == LCD_MODE_LIGHT          ||
+             handle->lcd_mode == LCD_MODE_LIGHT_SUBPIXEL ) )
+*/      {
         status.header = "dumping strong glyph points to stdout";
         af_glyph_hints_dump_strong_points( _af_debug_hints, 1 );
-//      }
+/*      }   */
       break;
 #endif /* FT_DEBUG_AUTOFIT */
 
