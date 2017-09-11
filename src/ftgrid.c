@@ -203,13 +203,11 @@
   grid_status_colors( GridStatus       st,
                       FTDemo_Display*  display )
   {
-    /* colours are adjusted for color-blind people, */
-    /* cf. http://jfly.iam.u-tokyo.ac.jp/color      */
     st->axis_color    = grFindColor( display->bitmap,   0,   0,   0, 255 ); /* black          */
-    st->grid_color    = grFindColor( display->bitmap, 192, 192, 192, 255 ); /* gray           */
-    st->outline_color = grFindColor( display->bitmap, 230, 159,   0, 255 ); /* orange         */
-    st->on_color      = grFindColor( display->bitmap, 230, 159,   0, 255 ); /* orange         */
-    st->off_color     = grFindColor( display->bitmap,  86, 180, 233, 255 ); /* sky blue       */
+    st->grid_color    = grFindColor( display->bitmap, 238, 232, 232, 255 ); /* light grey     */
+    st->outline_color = grFindColor( display->bitmap,  51, 51,   51, 255 ); /* dark grey      */
+    st->on_color      = grFindColor( display->bitmap, 209, 231,  81, 255 ); /* lime           */
+    st->off_color     = grFindColor( display->bitmap,  77, 188, 233, 255 ); /* electric blue  */
     st->segment_color = grFindColor( display->bitmap, 204, 121, 167,  64 ); /* reddish purple */
     st->blue_color    = grFindColor( display->bitmap,   0, 114, 178,  64 ); /* blue           */
   }
@@ -222,8 +220,8 @@
     /* colours are adjusted for color-blind people, */
     /* cf. http://jfly.iam.u-tokyo.ac.jp/color      */
     st->axis_color    = grFindColor( display->bitmap,   0,   0,   0, 255 ); /* black          */
-    st->grid_color    = grFindColor( display->bitmap, 192, 192, 192, 255 ); /* gray           */
-    st->outline_color = grFindColor( display->bitmap, 230, 159,   0, 255 ); /* orange         */
+    st->grid_color    = grFindColor( display->bitmap, 238, 232, 232, 255 ); /* light grey     */
+    st->outline_color = grFindColor( display->bitmap, 202, 202, 202, 255 ); /* med grey       */
     st->on_color      = grFindColor( display->bitmap, 230, 159,   0, 255 ); /* orange         */
     st->off_color     = grFindColor( display->bitmap,  86, 180, 233, 255 ); /* sky blue       */
     st->segment_color = grFindColor( display->bitmap, 204, 121, 167,  64 ); /* reddish purple */
